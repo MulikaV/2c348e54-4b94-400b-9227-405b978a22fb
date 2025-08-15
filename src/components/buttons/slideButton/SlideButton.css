@@ -1,0 +1,25 @@
+.slide-button {
+  transform: scaleX(1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.slide-button::after {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+    border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+  border-radius: 50% 50% 0 0;
+  transform: translateY(101%);
+}
+
+.slide-button:hover::after {
+  transform: translateY(0%);
+  border-radius: 0;
+}
+
+.slide-button-span:after {
+  transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1);
+  transform: translate(-50%, 100%);
+}
+
+.slide-button:hover .slide-button-span:after {
+  transform: translate(-50%, 0);
+}
