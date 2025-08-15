@@ -1,0 +1,28 @@
+.bubble-button-arrow {
+  transition-timing-function: cubic-bezier(0.625, 0.05, 0, 1);
+  transform: scale(0) rotate(0.001deg);
+  transform-origin: left;
+}
+
+.bubble-button-arrow-duplicate {
+  transition-timing-function: cubic-bezier(0.625, 0.05, 0, 1);
+  transform: scale(1) rotate(0.001deg);
+  transform-origin: right;
+}
+
+.bubble-button-content {
+  transition-timing-function: cubic-bezier(0.625, 0.05, 0, 1);
+  transform: translateX(calc(var(--height-9) * -1)) rotate(0.001deg);
+}
+
+.group:hover .bubble-button-arrow {
+  transform: scale(1) rotate(0.001deg);
+}
+
+.group:hover .bubble-button-arrow-duplicate {
+  transform: scale(0) rotate(0.001deg);
+}
+
+.group:hover .bubble-button-content {
+  transform: translateX(0em) rotate(0.001deg);
+}
